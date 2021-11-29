@@ -1,9 +1,10 @@
 from flask import Flask
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__)
 
 @app.route('/')
-def index():
+def hello_heroku():
     return app.send_static_file('index.html')
 
-app.run(debug=False)
+if __name__ == '__main__':
+    app.run(debug=True)
