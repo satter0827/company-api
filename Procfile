@@ -1,0 +1,1 @@
+web: gunicorn app:company_api --log-file=-
